@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Desk - Work Hub Center</title>
+    <style>
+        @media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr; /* Bir ustunda joylashadi */
+    }
+
+    .gallery {
+        grid-template-columns: 1fr; /* Bir ustunda rasm */
+    }
+
+    header nav a {
+        display: block; /* Havolalarni ustma-ust joylashtirish */
+        margin: 10px 0;
+    }
+}
+
+        body{
+            background-image: url("body.avif");
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("body.avif");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: transparent;
+            position: absolute;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .logo-text {
+            color: white;
+            margin-left: 1rem;
+        }
+
+        nav a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        /* Main Content */
+        .main-container {
+            min-height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url('office-background.jpg');
+            background-size: cover;
+            background-position: center;
+            padding-top: 100px;
+            color: white;
+        }
+
+        /* Hot Desk Section */
+        .hot-desk-section {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hot-desk-section h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .book-now-btn {
+            background: #4CAF50;
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 3rem;
+        }
+
+        /* Info Cards */
+        .info-cards {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .info-card {
+            background: rgba(139, 0, 0, 0.8);
+            padding: 2rem;
+            border-radius: 8px;
+            width: 200px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Description Box */
+        .description-box {
+            background: rgba(139, 0, 0, 0.8);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .see-more-btn {
+            background: #4CAF50;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 1rem;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        /* Colleagues Section */
+        .colleagues-section {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .colleagues-section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .colleague-logos {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .logo-card {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-card img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        /* Footer */
+        footer {
+            background: #00BFA5;
+            color: white;
+            padding: 3rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .info-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .colleague-logos {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            footer {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Work Hub Center">
+            <span class="logo-text">Work Hub Center</span>
+        </div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#locations">Locations</a>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <section class="hot-desk-section">
+            <h1>HOT-DESK</h1>
+            <a href="#book" class="book-now-btn">BOOK NOW ---></a>
+
+            <div class="info-cards">
+                <div class="info-card">
+                    <h3>COST $</h3>
+                </div>
+                <div class="info-card">
+                    <h3>ABOUT ROOMS</h3>
+                </div>
+                <div class="info-card">
+                    <h3>SINGLE ROOMS</h3>
+                </div>
+            </div>
+
+            <div class="description-box">
+                <p>The offices we offer are quality service and high-speed internet and quiet zone.</p>
+                <a href="#more" class="see-more-btn">see more</a>
+            </div>
+
+            <section class="colleagues-section">
+                <h2>Our colleagues</h2>
+                <div class="colleague-logos">
+                    <div class="logo-card">
+                        <img src="nike_PNG_12_2563b6b5e3.webp" alt="Cooking Company">
+                    </div>
+                    <div class="logo-card">
+                        <img src="adidas.webp" alt="Adidas">
+                    </div>
+                    <div class="logo-card">
+                        <img src="apple.png" alt="Company">
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-section">
+            <h3>Address</h3>
+            <p>M24, Musaffah, Abu Dhabi, UAE</p>
+        </div>
+        <div class="footer-section">
+            <h3>Contact UC</h3>
+            <p>+989999662323</p>
+            <p>EMAIL</p>
+            <p>@example.com</p>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
